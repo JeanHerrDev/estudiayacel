@@ -44,15 +44,41 @@
 <div>
   <div class="video-wrapper">
   <video autoplay muted controls>
-    <source src="videos/DinoSuma.mp4" type="video/mp4" />
+    <source src="videos/1. La Comunicación.mp4" type="video/mp4" />
     Tu navegador no soporta el video.
   </video>
   </div>
   <div class="con">
 
-  </div>
+    <div class="cone">
+    <h2>¿Qué es la Comunicación?</h2>
+    <button onclick="verificarRespuesta('Hablar')">Hablar</button>
+    <button onclick="verificarRespuesta('Permite Compartir Ideas')">Permite Compartir Ideas</button>
+    <button onclick="verificarRespuesta('Escribir')">Escribir</button>
 
-</div>
+    <p id="resultado"></p>
+    </div>
+
+  <script>
+    function verificarRespuesta(respuesta) {
+      const resultado = document.getElementById("resultado");
+
+      if (respuesta === "Permite Compartir Ideas") {
+        resultado.innerHTML = "✅ ¡Correcto!";
+        resultado.style.color = "green";
+
+        // Esta redirección debería funcionar
+        setTimeout(function() {
+          window.location.assign("comu2.html");
+        }, 10);
+
+      } else {
+        resultado.innerHTML = "❌ Incorrecto. Intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
+  </div>
 
 </div>
   <footer>

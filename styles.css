@@ -169,6 +169,33 @@ html, body {
   height: 300px;    /* Alto */
   background-color: rgb(255, 255, 255); /* Para que se vea */
   border: 1px solid #000;      /* Borde para que se note */
+  width: 100%;
+  margin: 0px 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+.cone {
+  width: auto;     /* Ancho */
+  height: 300px;    /* Alto */
+  background-color: rgb(255, 255, 255); /* Para que se vea */
+  border: 0px solid #000;      /* Borde para que se note */
+  width: 100%;
+  margin: 0px 0px;
+  padding: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 5px;
+  padding: 5px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#resultado {
+ margin-top: 20px;
+ font-size: 18px;
 }
 
 footer {

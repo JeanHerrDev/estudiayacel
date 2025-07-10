@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /> <!-- Codificación de caracteres para español -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala adecuada para móviles -->
-  <title>Página solo vertical (9:16)</title> <!-- Título de la página -->
+  <title>Comunicaion (9:16)</title> <!-- Título de la página -->
   <link rel="stylesheet" href="styles.css" /> <!-- Enlace al archivo de estilos externo -->
 </head>
 <body>
@@ -44,54 +44,42 @@
 <div>
   <div class="video-wrapper">
   <video autoplay muted controls>
-    <source src="videos/DinoSuma.mp4" type="video/mp4" />
+    <source src="videos/3. La Comunicación.mp4" type="video/mp4" />
     Tu navegador no soporta el video.
   </video>
   </div>
+  <div class="con">
 
-</div>
-<div class="contenedor-horizontal">
-  <h2>Top 5 Gratis</h2>
+    <div class="cone">
+    <h2>¿Comunicación No Verbal?</h2>
+    <button onclick="verificarRespuesta('Hablar')">Escribir</button>
+    <button onclick="verificarRespuesta('Permite Compartir Ideas')">Gestos</button>
+    <button onclick="verificarRespuesta('Escribir')">Llamar</button>
 
-  <div class="scroll-tarjetas">
+    <p id="resultado"></p>
+    </div>
 
-    <!-- Tarjeta 1 -->
-    <a href="comunicacion.html" class="tarjeta">
-      <span class="etiqueta">GRATIS</span>
-      <img src="img/COMUNICACIÓN.png" alt="Comunicación" />
-      <span class="numero">1</span>
-    </a>
+  <script>
+    function verificarRespuesta(respuesta) {
+      const resultado = document.getElementById("resultado");
 
-    <!-- Tarjeta 2 -->
-    <a href="matematica.html" class="tarjeta">
-      <span class="etiqueta">GRATIS</span>
-      <img src="img/MATEMATICAS.png" alt="Matemáticas" />
-      <span class="numero">2</span>
-    </a>
+      if (respuesta === "Permite Compartir Ideas") {
+        resultado.innerHTML = "✅ ¡Correcto!";
+        resultado.style.color = "green";
 
-        <!-- Tarjeta 3 -->
-    <a href="ciencias.html" class="tarjeta">
-      <span class="etiqueta">GRATIS</span>
-      <img src="img/CIENCIAS SOCIALES.png" alt="Comunicación" />
-      <span class="numero">3</span>
-    </a>
+        // Esta redirección debería funcionar
+        setTimeout(function() {
+          window.location.assign("comu4.html");
+        }, 10);
 
-        <!-- Tarjeta 4 -->
-    <a href="literatura.html" class="tarjeta">
-      <span class="etiqueta">GRATIS</span>
-      <img src="img/LITERATURA.png" alt="Comunicación" />
-      <span class="numero">4</span>
-    </a>
-
-        <!-- Tarjeta 5 -->
-    <a href="valores.html" class="tarjeta">
-      <span class="etiqueta">GRATIS</span>
-      <img src="img/VALORES.png" alt="Comunicación" />
-      <span class="numero">5</span>
-    </a>
-
-    <!-- Tarjetas adicionales... -->
+      } else {
+        resultado.innerHTML = "❌ Incorrecto. Intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
   </div>
+
 </div>
   <footer>
     <p>© 2025 EstudiaYa. Todos los derechos reservados.</p>
