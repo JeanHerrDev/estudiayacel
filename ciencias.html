@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /> <!-- Codificación de caracteres para español -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <!-- Escala adecuada para móviles -->
-  <title>Ciencias (9:16)</title> <!-- Título de la página -->
+  <title>Matematica (9:16)</title> <!-- Título de la página -->
   <link rel="stylesheet" href="styles.css" /> <!-- Enlace al archivo de estilos externo -->
 </head>
 <body>
@@ -44,12 +44,40 @@
 <div>
   <div class="video-wrapper">
   <video autoplay muted controls>
-    <source src="videos/DinoSuma.mp4" type="video/mp4" />
+    <source src="videos/1. Ciencias Sociales.mp4" type="video/mp4" />
     Tu navegador no soporta el video.
   </video>
   </div>
   <div class="con">
 
+    <div class="cone">
+    <h2>¿Qué es la Ciencia Social?</h2>
+    <button onclick="verificarRespuesta('Hablar')">Cuaderno</button>
+    <button onclick="verificarRespuesta('Permite Compartir Ideas')">Entendimiento del comportamiento</button>
+    <button onclick="verificarRespuesta('Escribir')">Jugar</button>
+
+    <p id="resultado"></p>
+    </div>
+
+  <script>
+    function verificarRespuesta(respuesta) {
+      const resultado = document.getElementById("resultado");
+
+      if (respuesta === "Permite Compartir Ideas") {
+        resultado.innerHTML = "✅ ¡Correcto!";
+        resultado.style.color = "green";
+
+        // Esta redirección debería funcionar
+        setTimeout(function() {
+          window.location.assign("cien2.html");
+        }, 10);
+
+      } else {
+        resultado.innerHTML = "❌ Incorrecto. Intenta de nuevo.";
+        resultado.style.color = "red";
+      }
+    }
+  </script>
   </div>
 
 </div>
